@@ -1,0 +1,540 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+#page{
+	max-width: 1101px;
+	width: 100%;
+	margin: 0 auto;
+}	
+body{
+	background-image: url(images-travel/bandeau-haut.jpg);
+	background-repeat: repeat-x;
+	/*background-color: #FD3F92;*/
+	/*background-color: #C71585;*/
+}
+
+#bandeau_haut{
+	width: 1101px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 47px;
+	color: white;
+}
+#bandeau_haut #menu_haut{
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	width: 50%;
+}
+#menu_haut a{
+	color: white;
+	box-sizing: border-box;
+    border-left: 2px solid white;
+    padding-left: 40px;
+}
+.blanc{
+	color: white;
+}
+#menu_haut a:hover{
+	color: #d39f71;
+}
+.blanc:hover{
+	color: #d39f71;
+}
+#bandeau{
+	text-align: center;
+	width: 100%;
+}
+#bandeau #menu_principal{
+	width: 100%;
+	/*margin: 15px 0;*/
+	margin: 3% 0;
+	font-weight: bold;
+}
+#bandeau #menu_principal .choix{
+	color: #d39f71;
+	border-bottom: 3px dotted black;
+}
+#bandeau_haut #menu_haut #no_border{
+	border: none;
+}
+/* alignement géré par l'élément juste au dessus ex un menu géré par ul*/
+#bandeau #menu_principal ul{
+	display: flex;
+	justify-content: space-around;
+}
+#bandeau #menu_principal ul li a{
+	color: black;
+}
+#bandeau #menu_principal ul li a:hover{
+	border-bottom: 3px dotted black;
+	color: #d39f71;
+}
+#bandeau #menu_principal input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+#bandeau #menu_principal .sous_menu{
+	display: none;
+}
+#bandeau #menu_principal .sous_menu li{
+	padding: 10px 0;
+}
+#menu_principal input[type=checkbox]{
+	display: none;
+}
+#bandeau #menu_principal .menu_responsive{
+	display: none;
+}
+#bandeau #menu_principal ul li:hover .sous_menu{
+	display: block;
+	z-index: 10000;
+	padding: 1%;
+	position: absolute;
+	background-color: white;
+}
+#bandeau #menu_principal ul li{
+	position: relative;
+}
+/*footer-----------------------------------*/
+#footer{
+	display: flex;
+	justify-content: center;
+	background-image: url(images-travel/bandeau-bas.jpg);
+	background-repeat: repeat-x;
+	height: 47px;
+}
+#footer #footer-content{
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1101px;
+}
+#footer #footer-content a{
+	color: white;
+}
+#footer #footer-content a:hover{
+	color: #d39f71;
+}
+/*div réseaux*/
+#reseaux{
+	color: #d39f71;
+	text-align: right;
+}
+/*accueil-----------------------------------*/
+#promo{
+	display: flex;
+}
+#promo .bloc_promo{
+	justify-content: space-around;
+	width: 25%;
+	padding: 10px;
+}
+#promo .bloc_promo p,
+#promo .bloc_promo a{
+	box-sizing: border-box;
+	padding: 5px 3px;
+	width: 100%;
+}
+#promo .bloc_promo a{
+	color: #d39f71;
+}
+#promo .bloc_promo h3{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+/*page séjours------------------------------------*/
+#contenu_sejour{
+	display: flex;
+	justify-content: space-around;
+}
+#contenu_sejour .bloc_contenu{
+	width: 49%;
+	/*margin: 5px;*/
+	display: flex;
+	flex-wrap: wrap;
+}
+#contenu_sejour .bloc_contenu h2,
+#contenu_sejour .bloc_contenu p{
+	width: 100%;
+	margin: 10px 0;
+}
+#contenu_sejour .bloc_contenu p label{
+	margin-right: 23%;
+	width: 60%;
+}
+#contenu_sejour .bloc_contenu .img-deco{
+	width: 100%;
+}
+#contenu_sejour .bloc_contenu .sejours{
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	width: 48%;
+	height: 150px;
+	margin: 5px;
+	padding: 1%;
+	border: 2px dotted #d39f71;
+}
+#contenu_sejour .bloc_contenu .sejours img{
+	width: 68%;
+	height: 80%;
+}
+#contenu_sejour .bloc_contenu .sejours h3{
+	width: 32%;
+	height: 30px;
+}
+#contenu_sejour .bloc_contenu .sejours a{
+	width: 20px;
+	height: 20px;
+	margin-top: -50px;
+	color: #d39f71;
+}
+/*zone mediaqueries sejours-----------------------*/
+@media screen and (max-width:768px){
+	#contenu_sejour{
+		flex-wrap: wrap;
+	}
+	#contenu_sejour .bloc_contenu{
+		width: 100%;
+	}
+	#contenu_sejour .bloc_contenu .sejours img{
+		width: 70%;
+	}
+	#contenu_sejour .bloc_contenu .sejours a{
+		background-color: white;
+		opacity: 0.6;
+		width: 30%;
+		padding: 1%;
+		font-weight: bold;
+		color: black;
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:1000px){
+	#contenu_sejour .bloc_contenu .sejours{
+		width: 70%;
+	}
+}
+
+/*page contact--------------------------------*/
+#contenu_contact{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#titres_hauts{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+#titres_hauts p{
+	width: 100%;
+	color: #d39f71;
+	margin: 1% 0;
+	text-align: left;
+	font-weight: bold;
+}
+#titres_hauts p.little{
+	width: 53%;
+}
+#contenu_contact{
+	width: 100%;
+}
+#contenu_contact #localisation address{
+	margin: 2% 0;
+	font-style: normal;
+}
+#contenu_contact fieldset{
+	box-sizing: border-box;
+	width: 100%;
+	border: 2px dotted black;
+	margin: 20px 2%;
+	padding: 10px 100px 10px 10px;
+}
+#contenu_contact p label{
+	width: 140px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px 0;
+}
+#contenu_contact p label.ville{
+	margin-left: 4%;
+}
+#contenu_contact p input[type=submit],
+#contenu_contact p input[type=reset]{
+	background-color: #d39f71;
+	color: black;
+	padding: 5px 0;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	margin: 2px 10px;
+	width: 9%;
+}
+#contenu_contact p input[type=text]:focus,
+#contenu_contact p textarea:focus{
+	background-color: grey;
+}
+#contenu_contact p textarea{
+	margin-bottom: 5px;
+}
+#contenu_contact p textarea,
+#contenu_contact p input[type=text]{
+	border-radius: 10px;
+}
+#contenu_contact #localisation #map{
+	border: 1px solid black;
+}
+/*zone mediaqueries contact------------------------*/
+@media screen and (max-width:768px){
+	#contenu_contact #titres_hauts p:nth-child(2n){
+		display: none;
+	}
+	#map iframe{
+		width: 100%;
+	}
+	#contenu_contact p.bouton input{
+		padding: 1%;
+		width: 80px;
+	}
+}
+@media screen and (min-width:769px) and (max-width:1000px){
+	#contenu_contact #titres_hauts p:nth-child(2n){
+		display: none;
+	}
+}
+/*page services--------------------------*/
+#contenu_services{
+	display: flex;
+	justify-content: space-between;
+}
+#contenu_services #bloc_droit{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	border: 2px dotted black;
+}
+#contenu_services #bloc_droit img{
+	width: 100%;
+	margin-top: 1%;
+}
+#contenu_services #bloc_droit video{
+	width: 100%;
+}
+#contenu_services #bloc_droit p{
+	margin: 15px 15px 0 15px;
+	font-weight: bold;
+	line-height: 20px;
+}
+#contenu_services #bloc_droit p input[type=submit]{
+	border-radius: 5px;
+	border: 1px solid black;
+	padding: 2px;
+	font-weight: bold;
+}	
+#contenu_services #bloc_droit p input[type=email]{
+	width: 80%;
+}
+#contenu_services #bloc_gauche{
+	width: 70%;
+	height: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#contenu_services #bloc_gauche .services{
+	margin-bottom: 1%;
+	width: 30%;
+	padding: 1%;
+	border: 2px dotted black;
+}
+#contenu_services #bloc_gauche .services img{
+	float: right;
+}
+#contenu_services #bloc_gauche h3{
+	width: 50%;
+	float: left;
+}
+#contenu_services #bloc_gauche .services a{
+	float: left;
+	color: #d39f71;
+	padding-top: 25%;
+}
+@media screen and (max-width:768px){
+	#contenu_services{
+		flex-wrap: wrap;
+	}
+	#contenu_services #bloc_gauche{
+		width: 100%;
+	}
+	#contenu_services #bloc_gauche .services{
+		width: 45%;
+	}
+	#contenu_services #bloc_droit{
+		width: 45%;
+	}
+}	
+/*page séjours de rêve--------------------------------*/
+#contenu_sejours_reve{
+	width: 100%;
+}
+.nivo-caption {
+	position:absolute;
+	background:transparent;
+	left:400px;
+	bottom:30px;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p{
+	font-style: italic;
+}
+.nivoSlider{
+	margin-top: 3%;
+}
+#contenu_sejours_reve p.resa{
+	width: 100%;
+	border: 2px dotted black;
+	line-height: 30px;
+	padding: 1%;
+	box-sizing: border-box;
+	margin-bottom: 1%;
+}
+#contenu_sejours_reve p a.infos{
+	color: #d39f71;
+	font-weight: bold;
+}
+@media screen and (max-width:768px){
+	.nivo-caption p{
+		display: none;
+	}
+	#contenu_sejours_reve #slider{
+		display: block;
+	}
+}
+/*page vols discounts-----------------------*/
+#contenu_vols_discount #destinations_discount .vols_europe{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	box-shadow: 5px 5px 5px #656565;
+	margin-bottom: 1%;
+}
+#contenu_vols_discount #destinations_discount .vols_europe p{
+	width: 70%;
+	text-align: justify;
+	line-height: 30px;
+}
+#contenu_vols_discount #destinations_discount .vols_europe h2{
+	width: 100%;
+	font-style: italic;
+}
+#contenu_vols_discount #destinations_discount .vols_europe a{
+	background-color: #d39f71;
+	color: white;
+	padding: 2px;
+	border-radius: 10px;
+}
+#contenu_vols_discount #destinations_discount .vols_europe img:hover{
+    /*-webkit-transform: scaleX(-1);
+    transform: scaleX(-1);*/
+    border-radius: 60%;
+}
+#contenu_vols_discount #map_cliquable:hover{
+	/*opacity: 0.8;*/
+	border-radius: 80px;
+}
+@media screen and (max-width:768px){
+	#contenu_vols_discount img.img_deco{
+		display: none;
+	}
+	#contenu_vols_discount #map_cliquable{
+		display: none;	
+	}	
+}
+@media screen and (min-width:769px) and (max-width:1000px){
+	#contenu_vols_discount #destinations_discount{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	#contenu_vols_discount #destinations_discount .vols_europe{
+		width: 45%;
+		background: #F5F5F5;
+		margin: 1% 0;
+		padding: 1%;
+		box-shadow: 5px 5px 5px #656565;
+	}
+}
+/*responsive design-----------------------------*/
+/*affichages jusqu'à 768px*/
+@media screen and (max-width:768px){
+	#bandeau #menu_principal ul li{
+		margin: 10px;
+	}
+	#bandeau #menu_principal ul{
+		flex-direction: column;
+		display: none;
+	}
+	#bandeau #menu_principal .menu_responsive{
+		display: block;
+		text-align: center;
+	}
+	#bandeau_haut #menu_haut{
+		display: none;
+	}
+	#slider{
+		display: none;
+	}
+	#promo{
+		flex-wrap: wrap;
+	}
+	#promo .bloc_promo{
+		width: 100%;
+	}
+	#reseaux{
+		text-align: center;
+	}
+	#footer{
+		text-align: center;
+	}
+}
+/*affichage écrans entre 769px et 1100px*/
+@media screen and (min-width:769px) and (max-width:1000px){
+	#promo{
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	#promo .bloc_promo{
+		width: 45%;
+		margin-bottom: 1%;
+	}
+	#promo .bloc_promo p,
+	#promo .bloc_promo a,
+	#promo .bloc_promo h3{
+		width: 100%;
+		text-align: left;
+	}
+	#reseaux{
+		text-align: center;
+	}
+}
