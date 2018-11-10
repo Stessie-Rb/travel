@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Vols</title>
+	<meta name ="descritpion" content="Réservez votre vol pour la destination de votre choix" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<div id="page">
+
+		<!--bandeau haut-->
+		<section id="bandeau_haut">
+			<ul id="menu_haut">
+				<li><a href="#" id="no_border">Blog</a></li>
+				<li><a href="#">Nous contacter</a></li>
+				<li><a href="#">Newsletter</a></li>
+				<li><a href="#">Site mobile</a></li>
+			</ul>
+
+			<a href="#" class="blanc">&gt; &gt; Espace client</a>
+		</section>
+	   <!--header et logo-->
+	    <header id="bandeau">
+	   	<a href="index.html">
+	   	<img src="images-travel/logo-travel.jpg" alt="Logo Travel" />
+	    </a>
+
+	    <nav id="menu_principal">
+	    	<label for="menu_responsive" class="menu_responsive">Menu</label><input type="checkbox" id="menu_responsive" role="bouton" />
+	    	<ul>
+	    		<li><a href="index.html">ACCUEIL</a></li>
+	    		<li><a href="#" >VOLS & SEJOURS</a>
+	    		<ul class="sous_menu">
+	    				<li><a href="vols_discount.html" class="choix">Vols discount</a></li>
+	    				<li><a  href="sejours-reve.html">Séjours de rêve</a></li>
+	    			</ul>
+	    		</li>
+	    		<li><a href="vols.html" class="choix">VOLS</a></li>
+	    		<li><a href="sejours.html" >SEJOURS</a></li>
+	    		<li><a href="services.html">SERVICES</a></li>
+	    		<li><a href="contact.html">CONTACT</a></li>
+	    	</ul>
+	    </nav>	
+	    </header>
+	    <!-- page vols-->
+	    <main id="page_vols">
+	    	<!--div occupant 100% du main-->
+	    	<div id="formulaire_vols">
+	    		<!--div contenant le "moteur de recherche" de vols"-->
+	    		<div id="opacity">
+	    		<img src="images-travel/icone_formulaire2.PNG" />
+	    		<p><label for="nom">A destination de: </label><input type="text" name="destination" id="destination" placeholder="Où souhaitez vous partir? " ></p>
+	    		<p><label for="date_vol">Date de départ: <br /></label><input type="date" name="date_vol" id="date_vol" ></p><p>
+				<input type="radio" name="type-vol" id="aller_simple" value="aller_simple"><label for="aller_simple">Aller simple</label>
+				<input type="radio" name="type-vol" id="aller_retour" value="aller_retour" ><label for="aller_retour">Aller/retour</label>
+			</p>
+			<a href="#">Rechercher</a>
+				</div>
+	    	</div>
+	    </main>
+	    	<!--Div réseaux-->
+			<div id="reseaux">
+				Nous suivre<br />
+				<a href="#">
+					<img src="images-travel/facebook.jpg" alt="Suivre Travel sur Facebook">
+				</a>
+				<a href="#">
+					<img src="images-travel/twitter.jpg" alt="Suivre Travel sur Twitter">
+				</a>
+			</div>
+	</div>
+	<footer id="footer">
+		<div id="footer-content">
+			<p>&copy 2018-Tous droits réservés</p>
+			<p><a href="infos_legales.html">Infos légales</a></p>
+		</div>	
+	</footer>	
+	
+</body>
+</html>
