@@ -16,10 +16,14 @@ a{
 body{
 	background-image: url(images-travel/bandeau-haut.jpg);
 	background-repeat: repeat-x;
-	/*background-color: #FD3F92;*/
-	/*background-color: #C71585;*/
+	min-height: 100%;
+	position: relative;
+	/*background-color: #FD3F92;
+	background-color: #C71585;*/
 }
-
+html{
+	min-height: 100%;
+}
 #bandeau_haut{
 	width: 1101px;
 	display: flex;
@@ -55,7 +59,6 @@ body{
 }
 #bandeau #menu_principal{
 	width: 100%;
-	/*margin: 15px 0;*/
 	margin: 3% 0;
 	font-weight: bold;
 }
@@ -78,6 +81,7 @@ body{
 	border-bottom: 3px dotted black;
 	color: #d39f71;
 }
+/*checkbox pour faire apparaître le menu mobile en cliquant*/
 #bandeau #menu_principal input[type=checkbox]:checked ~ ul{
 	display: block;
 }
@@ -87,6 +91,7 @@ body{
 #bandeau #menu_principal .sous_menu li{
 	padding: 10px 0;
 }
+/*masque la checkbox dans la version "desktop" du site*/
 #menu_principal input[type=checkbox]{
 	display: none;
 }
@@ -105,11 +110,16 @@ body{
 }
 /*footer-----------------------------------*/
 #footer{
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	background-image: url(images-travel/bandeau-bas.jpg);
 	background-repeat: repeat-x;
 	height: 47px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 #footer #footer-content{
 	color: white;
@@ -128,6 +138,7 @@ body{
 #reseaux{
 	color: #d39f71;
 	text-align: right;
+	height: 100px;
 }
 /*accueil-----------------------------------*/
 #promo{
@@ -151,7 +162,15 @@ body{
 	text-align: center;
 	padding-bottom: 10px;
 }
-
+/*gestion rendu accueil sur écrans de petite taille*/
+@media screen and (max-width:768px){
+	#contenu_accueil #promo .bloc_promo{
+		text-align: center;
+	}
+	#contenu_accueil #promo .bloc_promo p{
+		text-align: center;
+	}
+}
 /*page séjours------------------------------------*/
 #contenu_sejour{
 	display: flex;
@@ -159,7 +178,6 @@ body{
 }
 #contenu_sejour .bloc_contenu{
 	width: 49%;
-	/*margin: 5px;*/
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -237,6 +255,7 @@ body{
 	width: 100%;
 	justify-content: space-between;
 }
+/*permets d'aligner le nom des deux blocs avec le formulaire situé en dessous*/
 #titres_hauts p{
 	width: 100%;
 	color: #d39f71;
@@ -296,6 +315,7 @@ body{
 	border: 1px solid black;
 }
 /*zone mediaqueries contact------------------------*/
+/*supprime le titre du bloc droit qui passe en dessous de la map en responsive*/
 @media screen and (max-width:768px){
 	#contenu_contact #titres_hauts p:nth-child(2n){
 		display: none;
@@ -390,9 +410,9 @@ body{
 }
 .nivo-caption {
 	position:absolute;
-	background:transparent;
-	left:400px;
-	bottom:30px;
+	background-color: rgba(0, 0, 0, 0.35);
+	left:200px;
+	bottom:360px;
 	width:100%;
 	z-index:8;
 	padding: 5px 10px;
@@ -407,6 +427,8 @@ body{
 }
 .nivo-caption p{
 	font-style: italic;
+	font-size: 20px;
+	font-family: cursive;
 }
 .nivoSlider{
 	margin-top: 3%;
@@ -422,6 +444,13 @@ body{
 #contenu_sejours_reve p a.infos{
 	color: #d39f71;
 	font-weight: bold;
+}
+#contenu_sejours_reve p a.button{
+	background-color: #d39f71;
+	border-radius: 5px;
+	padding: 3px;
+	margin-left: 10px;
+	color: white;
 }
 @media screen and (max-width:768px){
 	.nivo-caption p{
@@ -459,8 +488,10 @@ body{
     transform: scaleX(-1);*/
     border-radius: 60%;
 }
+#contenu_vols_discount #destinations_discount .vols_europe p .ref{
+	font-weight: bold;
+}
 #contenu_vols_discount #map_cliquable:hover{
-	/*opacity: 0.8;*/
 	border-radius: 80px;
 }
 @media screen and (max-width:768px){
@@ -469,7 +500,10 @@ body{
 	}
 	#contenu_vols_discount #map_cliquable{
 		display: none;	
-	}	
+	}
+	#contenu_vols_discount #destinations_discount .vols_europe{
+	justify-content: center;
+	}
 }
 @media screen and (min-width:769px) and (max-width:1000px){
 	#contenu_vols_discount #destinations_discount{
@@ -484,6 +518,72 @@ body{
 		padding: 1%;
 		box-shadow: 5px 5px 5px #656565;
 	}
+}
+/*pages infos légales--------------------*/
+#infos-legales h1{
+	width: 25%;
+	text-align: center;
+	margin-left: 37%;
+	color: #0f3977;
+	border-bottom: 1px solid #70cbf4;
+}
+#infos-legales h2{
+	font-style: italic;
+	color:  #0f3977;
+	margin-bottom: 1%;
+}
+#infos-legales h3{
+	font-style: italic;
+	color: #0f3977;
+	margin-bottom: 1%;
+}
+
+#infos-legales p{
+	font-size: 16px;
+	font-style: italic;
+	color: grey;
+}
+/*page vols-----------------------------*/
+#page_vols{
+	background-image: url("images-travel/img_vols.PNG");
+	min-height: 731px;
+}
+#page_vols img{
+	border-radius: 10px;
+	width: 8%;
+}
+/*padding permettant de gérer l'alignement de la div opaciity*/
+#page_vols #formulaire_vols{
+	padding: 10%;
+}
+#page_vols #formulaire_vols p{
+	color: white;
+	font-size: 20px;
+	margin: 3% 0;
+}
+#page_vols #formulaire_vols #opacity{
+	background-color: rgba(0, 0, 0, 0.45);
+	padding: 3%;
+	box-shadow: 5px 5px 5px black;
+}
+#page_vols #formulaire_vols p input[type=text]{
+	width: 90%;
+	height: 30px;
+	margin-top: 1%;
+}
+#page_vols #formulaire_vols #opacity a{
+	background-color: yellow;
+	padding: 1%;
+	border-radius: 10px;
+	color: black;
+	font-weight: bold;
+	font-size: 17px;
+}
+#page_vols #formulaire_vols p input[type=date]{
+	margin-left: 10px;
+}
+#page_vols #formulaire_vols p input[type=radio]{
+	margin-right: 10px;
 }
 /*responsive design-----------------------------*/
 /*affichages jusqu'à 768px*/

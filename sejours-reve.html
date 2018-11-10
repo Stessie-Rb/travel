@@ -31,14 +31,14 @@
 	    	<label for="menu_responsive" class="menu_responsive">Menu</label><input type="checkbox" id="menu_responsive" role="bouton" />
 	    	<ul>
 	    		<li><a href="index.html">ACCUEIL</a></li>
-	    		<li><a href="#">VOLS & SEJOURS</a>
+	    		<li><a href="#" class="choix">VOLS & SEJOURS</a>
 	    		<ul class="sous_menu">
 	    				<li><a href="vols_discount.html">Vols discount</a></li>
 	    				<li><a  href="sejours-reve.html">Séjours de rêve</a></li>
 	    			</ul>
 	    		</li>
-	    		<li><a href="#">VOLS</a></li>
-	    		<li><a href="sejours.html" class="choix">SEJOURS</a></li>
+	    		<li><a href="vols.html ">VOLS</a></li>
+	    		<li><a href="sejours.html" >SEJOURS</a></li>
 	    		<li><a href="services.html">SERVICES</a></li>
 	    		<li><a href="contact.html">CONTACT</a></li>
 	    	</ul>
@@ -49,6 +49,7 @@
 		<main id="contenu_sejours_reve">
 
 			<!--séjour Alaska-->
+			<!--div contenant les images-->
 			<div class="slider-wrapper theme-default">
          		<div id="slider" class="nivoSlider">
           			<img src="images-travel/aurore_boreale.jpg" alt="Observez une aurore boréale" title="#htmlcaption">
@@ -56,6 +57,7 @@
           			<img src="images-travel/chiens_traineau.jpg" alt="Partez en randonnée avec les chiens de traineau" title="#htmlcaption3">
           			<img src="images-travel/ours_polaire.jpg" alt="Protégez les ours polaires" title="#htmlcaption4">
 				</div>
+			<!--div contenant les textes du slider-->
 			<div id="htmlcaption" class="nivo-html-caption">
                 <P>ALASKA</P> 
             	</div>
@@ -69,13 +71,16 @@
                 <P>Partez à la découverte des ours polaires, espèce fragile menacée d'extinction</P> 
             	</div>
 			</div>
-
+			
 			<p class="resa">
 				Embarquez pour un séjour de rêve en Alaska, pour 7 jours et 7 nuits de pur bonheur. <a href="#" class="infos">Plus d'infos</a><br />
 				<label for="reservation">N'attendez plus! Réservez dès maintenant</label>
-				<input type="date" name="reservation_Alaska" id="reservation_Alaska" placeholder="Choisissez votre date de départ"></p>
+				<input type="date" name="reservation_Alaska" id="reservation_Alaska" placeholder="Choisissez votre date de départ"><a href="#" class="button">Je réserve!</a>
+			</p>
+
 			
 			<!--Safari de rêve-->
+			<!--div contenant les images du second slider-->
 			<div class="slider-wrapper theme-default">
          		<div id="slider2" class="nivoSlider">
           			<img src="images-travel/safari_1.jpg" alt="Partez à l'aventure dans la savanne" title="#htmlcaption5">
@@ -83,6 +88,7 @@
           			<img src="images-travel/safari _3.jpg" alt="Découvrez la savanne en Montgolfière" title="#htmlcaption7">
           			<img src="images-travel/hyennes.jpg" alt="Partagez des moments au plus près des animaux" title="#htmlcaption8">
 				</div>
+			<!--div contenant les textes du second slider-->
 			<div id="htmlcaption5" class="nivo-html-caption">
                 <P>SAFARI AU KENYA</P> 
             	</div>
@@ -100,7 +106,7 @@
 			<p class="resa">
 				Envolez-vous à la découverte de l'Afrique sous son côté le plus sauvage... <a href="#" class="infos">Plus d'infos</a><br />
 				<label for="reservation">N'attendez plus! Envolez-vous dès maintenant</label>
-				<input type="date" name="reservation_safari" id="reservation_safari" placeholder="Choisissez votre date de départ">
+				<input type="date" name="reservation_safari" id="reservation_safari" placeholder="Choisissez votre date de départ"><a href="#" class="button">Je réserve!</a>
 			</p>
 	</main>
 	 <!--Div réseaux-->
@@ -118,7 +124,7 @@
 	<footer id="footer">
 		<div id="footer-content">
 			<p>&copy 2018-Tous droits réservés</p>
-			<p><a href="#">Infos légales</a></p>
+			<p><a href="infos_legales.html">Infos légales</a></p>
 		</div>	
 	</footer>	
 		<!--script slider-->
@@ -131,10 +137,7 @@
         });
     });
     </script>
-
-    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
-    <script type="text/javascript">
+	<script type="text/javascript">
     $(window).load(function() {
         $('#slider2').nivoSlider({
         				controlNav: false
